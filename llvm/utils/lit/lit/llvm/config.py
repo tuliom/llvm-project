@@ -171,6 +171,8 @@ class LLVMConfig(object):
                 features.add("target-arm")
             elif re.match(r"^ppc64le.*-linux", target_triple):
                 features.add("target=powerpc64le-linux")
+            elif re.match(r"^ppc64.*-linux", target_triple):
+                features.add("target=powerpc64-linux")
             elif re.match(r"^riscv64-.*-elf", target_triple):
                 features.add("target-riscv64")
             elif re.match(r"^riscv32-.*-elf.", target_triple):
